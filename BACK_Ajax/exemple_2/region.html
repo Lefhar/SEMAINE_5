@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>région</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <select id="select1"></select>
+        <select id="select2"></select>
+    </body>
+    </html>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("#select1").load("listeoptions1.php");
+
+            $("#select1").change(function() {
+                $("#select2").load("listeoptions2.php?id_region="+$("#select1").val());
+            });
+        });
+
+    </script>
+</body>
+</html>
